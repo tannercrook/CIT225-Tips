@@ -1,0 +1,61 @@
+{% block html %}
+<!DOCTYPE html>
+<html lang="en" class="bg-dark">
+    {% block head %}
+    <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block meta %}
+
+        {% endblock meta %}
+        {% block title %}
+            <title>Some Title</title>
+        {% endblock title %}
+        {% block includes %}
+             <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+            <!-- Ubuntu Font -->
+            <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet"> 
+            <!-- Font Awesome -->
+            <script src="https://kit.fontawesome.com/de7111c66b.js" crossorigin="anonymous"></script>
+        {% endblock includes %}
+        {% block styles %}
+            <!-- Custom CSS -->
+            <link rel="stylesheet" href="{{url_for('static', filename='styles/custom.css')}}"/>
+        {% endblock styles %}
+    </head>
+    {% endblock head %}
+
+
+    
+    {% block body %}
+    <!-- Body -->
+    <body>
+        
+        {% block header %}
+        <!-- Header -->
+        <header>
+            {% block nav %}
+            <!-- Navigation -->
+            
+            {% endblock nav %}
+
+        </header>
+        {% endblock header %}
+
+        {% block main %}
+        <!-- Main container used for content -->
+            {% block content %}
+            <!-- Content -->
+
+            {% endblock content %}
+        {% endblock main %}
+    </body>
+    {% endblock body %}
+</html>
+{% endblock html %}
